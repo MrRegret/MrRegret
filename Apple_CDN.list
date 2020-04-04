@@ -1,11 +1,11 @@
 # Apple_CDN.list
 # > App Store
-  - DOMAIN-SUFFIX,mzstatic.com,🍏 苹果CDN
-  - DOMAIN,iosapps.itunes.apple.com,🍏 苹果CDN
-  - DOMAIN,osxapps.itunes.apple.com,🍏 苹果CDN
+  - DOMAIN-SUFFIX,mzstatic.com
+  - DOMAIN,iosapps.itunes.apple.com
+  - DOMAIN,osxapps.itunes.apple.com
 # > Update
-  - DOMAIN,supportdownload.apple.com,🍏 苹果CDN
-  - DOMAIN,appldnld.apple.com,🍏 苹果CDN
-  - DOMAIN,swcdn.apple.com,🍏 苹果CDN
-  - DOMAIN,apptrailers.itunes.apple.com,🍏 苹果CDN
-  - DOMAIN,updates-http.cdn-apple.com,🍏 苹果CDN
+  - DOMAIN,supportdownload.apple.com
+  - DOMAIN,appldnld.apple.com
+  - DOMAIN,swcdn.apple.com
+  - DOMAIN,apptrailers.itunes.apple.com
+  - DOMAIN,updates-http.cdn-apple.com
