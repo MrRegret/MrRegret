@@ -3,7 +3,9 @@
 DOMAIN,aod.itunes.apple.com
 DOMAIN,api.smoot.apple.cn
 DOMAIN,mvod.itunes.apple.com
+DOMAIN,music.apple.com
 # > App Store
+user-agent,com.apple.appstored*
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN,iosapps.itunes.apple.com
 DOMAIN,osxapps.itunes.apple.com
@@ -13,3 +15,6 @@ DOMAIN,appldnld.apple.com
 DOMAIN,swcdn.apple.com
 DOMAIN,apptrailers.itunes.apple.com
 DOMAIN,updates-http.cdn-apple.com
+# > Map
+host-suffix,ls.apple.com
+host,gs-loc-cn.apple.com
