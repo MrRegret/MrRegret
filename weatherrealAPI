@@ -218,11 +218,11 @@ function modifyWeatherResp(weatherRespBody, aqicnRespBody) {
 	return JSON.stringify(weatherRespJson)
 }
 
-$httpClient.get(`https://api.waqi.info/feed/geo:${lat};${lng}/?token=${aqicnToken}`, function (error, _response, data) {
+$task.fetch(`https://api.waqi.info/feed/geo:${lat};${lng}/?token=${aqicnToken}`, function (error, _response, data) {
 	if (error) {
-		$done({})
+		$done(body)
 	} else {
 		let body = modifyWeatherResp($response.body, data)
-		$done({ body })
+		$done(body)
 	}
 });
