@@ -1,3 +1,4 @@
+
 /*
     本作品用于QuantumultX和Surge之间js执行方法的转换
     您只需书写其中任一软件的js,然后在您的js最【前面】追加上此段js即可
@@ -115,7 +116,7 @@ if (isSurge) {
                             });
                         } else {
                             resolve(null, {
-                                error: error
+error: error
                             })
                         }
                     })
@@ -163,6 +164,7 @@ if (isSurge) {
         $notification.post(title, subTitle, detail);
     }
 }
+
 const aqicnToken = 'e12d7ab7e84aec0e6aa77c780c5c86cf82ede077'
 const AirQualityStandard = {
 	CN: 'HJ6332012.1',
