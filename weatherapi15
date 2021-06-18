@@ -107,19 +107,29 @@ function timeConversion(time, action) {
 		default:
 			console.log('Error time converting action.');
 	}
-	let timeString = time.toISOString().split('.')[0] + 'Z'
-	return timeString;
-}
+	time.setMinutes(2, 0, 0);
+ 	return time;
+ }
 
-$httpClient.get(`https://api.waqi.info/feed/geo:${lat};${lng}/?token=${aqicnToken}`, function (error, _response, data) {
-	if (error) {
-		let body = $response.body
-		$done({ body })
-	} else {
-		let body = modifyWeatherResp($response.body, data)
-		$done({ body })
-	}
-});
+ $.get(
+   {
+     url: `https://api.waqi.info/feed/geo:${lat};${lng}/?token=${aqicnToken}`,
+     headers: $request.headers,
+   },
+   (err, resp, data) => {
+     try {
+       if (err) {
+         $.logErr(err, resp);
+       } else {
+         let body = modifyWeatherResp($response.body, resp.body);
+         $.done({ body });
+       }
+     } catch (e) {
+       $.logErr(e, resp);
+       $.done();
+     }
+   }
+ );
 
 /***************** Env *****************/
 // prettier-ignore
